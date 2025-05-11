@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    container_name: telegram-bot
+    build: .
+    restart: always
+    environment:
+      - BOT_TOKEN=7842994445:AAGIhFb7L1ENbzXJR6BXlCyOQWzLDVl51M4
+    volumes:
+      - .:/app
+    command: python bot.py
